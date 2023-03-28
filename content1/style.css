@@ -1,0 +1,65 @@
+*{
+    background-color: black;
+    box-sizing: border-box;
+}
+.division{
+    border-radius: 10px;
+    margin: auto;
+    
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+    padding: 10px;
+    margin-top: 15%;
+    z-index: -1;
+    
+    
+   
+}
+.container{
+    border-radius: 2px solid red;
+    background-color: aqua;
+    width: 230px;
+    height: 230px;
+    padding: 29px; 
+    overflow: hidden; 
+    
+}
+.division .container p{
+    background-color: aqua;
+    color: blue;
+}
+
+
+.division:hover{
+    box-shadow: 4px 0 80px 10px #10cb20;
+}
+.division::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 20%;
+    background-color: red;
+    height: 600px;
+    padding: 20%;
+    margin: auto;
+    top: -100px;
+    z-index: -1;
+
+    animation-name: spin;
+    animation-duration: 2s;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
